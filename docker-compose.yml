@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  backend:
+    build: infra/python/
+    volumes:
+      - ./server:/project/server
+    ports:
+      - 5000:5000
+  
+  frontend:
+    build: infra/react/
+    volumes:
+      - ./client:/project/client
+    ports:
+      - 3000:3000

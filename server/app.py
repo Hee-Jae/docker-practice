@@ -5,7 +5,7 @@ def create_app():
   app = Flask(__name__)
   
   app.register_blueprint(bp)
-  app.secret_key = 'secret-key'
+  app.secret_key = 'docker-secret-key'
   
   return app
 
